@@ -2,7 +2,7 @@
   "apartments": [
     {
       "id": "A22",
-      "type": "1bedroom",
+      "type": "studio",
       "area": "24.62㎡",
       "floor": "6F",
       "price": {
@@ -11,14 +11,14 @@
         "th": "2650 หยวน/เดือน"
       },
       "deposit": {
-        "zh": "押一付三",
-        "en": "1 month deposit + 3 months rent",
-        "th": "มัดจำ 1 เดือน + เช่าล่วงหน้า 3 เดือน"
+        "zh": "押二付一",
+        "en": "2 months deposit + 1 month rent",
+        "th": "มัดจำ 2 เดือน + เช่าล่วงหน้า 1 เดือน"
       },
       "features": {
-        "zh": ["一居室大单间", "带独立卫生间", "独立阳台", "精装修", "采光充足"],
-        "en": ["One-bedroom studio", "Private bathroom", "Private balcony", "Fully furnished", "Great natural light"],
-        "th": ["สตูดิโอห้องนอนเดียว", "ห้องน้ำส่วนตัว", "ระเบียงส่วนตัว", "ตกแต่งพร้อมอยู่", "แสงธรรมชาติดี"]
+        "zh": ["大开间", "带独立卫生间", "独立阳台", "精装修", "采光充足"],
+        "en": ["Open-plan studio", "Private bathroom", "Private balcony", "Fully furnished", "Great natural light"],
+        "th": ["สตูดิโอแบบโอเพนพลาน", "ห้องน้ำส่วนตัว", "ระเบียงส่วนตัว", "ตกแต่งพร้อมอยู่", "แสงธรรมชาติดี"]
       },
       "images": [
         "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -27,7 +27,7 @@
     },
     {
       "id": "A02",
-      "type": "1bedroom",
+      "type": "studio",
       "area": "27.5㎡",
       "floor": "8F",
       "price": {
@@ -36,14 +36,14 @@
         "th": "2700 หยวน/เดือน"
       },
       "deposit": {
-        "zh": "押一付三",
-        "en": "1 month deposit + 3 months rent",
-        "th": "มัดจำ 1 เดือน + เช่าล่วงหน้า 3 เดือน"
+        "zh": "押二付一",
+        "en": "2 months deposit + 1 month rent",
+        "th": "มัดจำ 2 เดือน + เช่าล่วงหน้า 1 เดือน"
       },
       "features": {
-        "zh": ["一居室大单间", "带独立卫生间", "独立阳台", "精装修", "高层景观"],
-        "en": ["One-bedroom studio", "Private bathroom", "Private balcony", "Fully furnished", "High floor view"],
-        "th": ["สตูดิโอห้องนอนเดียว", "ห้องน้ำส่วนตัว", "ระเบียงส่วนตัว", "ตกแต่งพร้อมอยู่", "วิวชั้นสูง"]
+        "zh": ["大开间", "带独立卫生间", "独立阳台", "精装修", "高层景观"],
+        "en": ["Open-plan studio", "Private bathroom", "Private balcony", "Fully furnished", "High floor view"],
+        "th": ["สตูดิโอแบบโอเพนพลาน", "ห้องน้ำส่วนตัว", "ระเบียงส่วนตัว", "ตกแต่งพร้อมอยู่", "วิวชั้นสูง"]
       },
       "images": [
         "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -52,7 +52,7 @@
     },
     {
       "id": "A05",
-      "type": "1bedroom",
+      "type": "studio",
       "area": "28.2㎡",
       "floor": "10F",
       "price": {
@@ -61,69 +61,11 @@
         "th": "2850 หยวน/เดือน"
       },
       "deposit": {
-        "zh": "押一付三",
-        "en": "1 month deposit + 3 months rent",
-        "th": "มัดจำ 1 เดือน + เช่าล่วงหน้า 3 เดือน"
+        "zh": "押二付一",
+        "en": "2 months deposit + 1 month rent",
+        "th": "มัดจำ 2 เดือน + เช่าล่วงหน้า 1 เดือน"
       },
       "features": {
-        "zh": ["一居室大单间", "带独立卫生间", "独立阳台", "精装修", "安静舒适"],
-        "en": ["One-bedroom studio", "Private bathroom", "Private balcony", "Fully furnished", "Quiet & comfortable"],
-        "th": ["สตูดิโอห้องนอนเดียว", "ห้องน้ำส่วนตัว", "ระเบียงส่วนตัว", "ตกแต่งพร้อมอยู่", "เงียบสงบ"]
-      },
-      "images": [
-        "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-      ]
-    },
-    {
-      "id": "A19",
-      "type": "1bedroom",
-      "area": "30㎡",
-      "floor": "12F",
-      "price": {
-        "zh": "3100元/月",
-        "en": "3100 yuan/month",
-        "th": "3100 หยวน/เดือน"
-      },
-      "deposit": {
-        "zh": "押一付三",
-        "en": "1 month deposit + 3 months rent",
-        "th": "มัดจำ 1 เดือน + เช่าล่วงหน้า 3 เดือน"
-      },
-      "features": {
-        "zh": ["一居室大单间", "带独立卫生间", "独立阳台", "精装修", "明厨明卫"],
-        "en": ["One-bedroom studio", "Private bathroom", "Private balcony", "Fully furnished", "Bright kitchen & bath"],
-        "th": ["สตูดิโอห้องนอนเดียว", "ห้องน้ำส่วนตัว", "ระเบียงส่วนตัว", "ตกแต่งพร้อมอยู่", "ครัวและห้องน้ำสว่าง"]
-      },
-      "images": [
-        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-      ]
-    },
-    {
-      "id": "A12",
-      "type": "1bedroom",
-      "area": "31.75㎡",
-      "floor": "15F",
-      "price": {
-        "zh": "3200元/月",
-        "en": "3200 yuan/month",
-        "th": "3200 หยวน/เดือน"
-      },
-      "deposit": {
-        "zh": "押一付三",
-        "en": "1 month deposit + 3 months rent",
-        "th": "มัดจำ 1 เดือน + เช่าล่วงหน้า 3 เดือน"
-      },
-      "features": {
-        "zh": ["一居室大单间", "带独立卫生间", "独立阳台", "精装修", "城市景观"],
-        "en": ["One-bedroom studio", "Private bathroom", "Private balcony", "Fully furnished", "City view"],
-        "th": ["สตูดิโอห้องนอนเดียว", "ห้องน้ำส่วนตัว", "ระเบียงส่วนตัว", "ตกแต่งพร้อมอยู่", "วิวเมือง"]
-      },
-      "images": [
-        "https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-      ]
-    }
-  ]
-}
+        "zh": ["大开间", "带独立卫生间", "独立阳台", "精装修", "安静舒适"],
+        "en": ["Open-plan studio", "Private bathroom", "Private balcony", "Fully furnished", "Quiet & comfortable"],
+        "
