@@ -4,7 +4,7 @@
       "id": "A22",
       "type": "studio",
       "area": "24.62㎡",
-      "floor": "6F",
+      "floor": "6F 朝北",
       "price": {
         "zh": "2650元/月",
         "en": "2650 yuan/month",
@@ -16,9 +16,9 @@
         "th": "มัดจำ 2 เดือน + เช่าล่วงหน้า 1 เดือน"
       },
       "features": {
-        "zh": ["大开间", "带独立卫生间", "独立阳台", "精装修", "采光充足"],
-        "en": ["Open-plan studio", "Private bathroom", "Private balcony", "Fully furnished", "Great natural light"],
-        "th": ["สตูดิโอแบบโอเพนพลาน", "ห้องน้ำส่วนตัว", "ระเบียงส่วนตัว", "ตกแต่งพร้อมอยู่", "แสงธรรมชาติดี"]
+        "zh": ["大开间", "带独立卫生间", "独立阳台", "精装修", "采光充足", "此房型共有17层可选，价格根据楼层不同"],
+        "en": ["Open-plan studio", "Private bathroom", "Private balcony", "Fully furnished", "Great natural light", "17 floors available for this apartment type, price varies by floor"],
+        "th": ["สตูดิโอแบบโอเพนพลาน", "ห้องน้ำส่วนตัว", "ระเบียงส่วนตัว", "ตกแต่งพร้อมอยู่", "แสงธรรมชาติดี", "มีห้องให้เลือก 17 ชั้น ราคาจะแตกต่างกันตามชั้น"]
       },
       "images": [
         "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -29,7 +29,7 @@
       "id": "A02",
       "type": "studio",
       "area": "27.5㎡",
-      "floor": "8F",
+      "floor": "8F 朝北",
       "price": {
         "zh": "2700元/月",
         "en": "2700 yuan/month",
@@ -41,9 +41,9 @@
         "th": "มัดจำ 2 เดือน + เช่าล่วงหน้า 1 เดือน"
       },
       "features": {
-        "zh": ["大开间", "带独立卫生间", "独立阳台", "精装修", "高层景观"],
-        "en": ["Open-plan studio", "Private bathroom", "Private balcony", "Fully furnished", "High floor view"],
-        "th": ["สตูดิโอแบบโอเพนพลาน", "ห้องน้ำส่วนตัว", "ระเบียงส่วนตัว", "ตกแต่งพร้อมอยู่", "วิวชั้นสูง"]
+        "zh": ["大开间", "带独立卫生间", "独立阳台", "精装修", "高层景观", "此房型共有17层可选，价格根据楼层不同"],
+        "en": ["Open-plan studio", "Private bathroom", "Private balcony", "Fully furnished", "High floor view", "17 floors available for this apartment type, price varies by floor"],
+        "th": ["สตูดิโอแบบโอเพนพลาน", "ห้องน้ำส่วนตัว", "ระเบียงส่วนตัว", "ตกแต่งพร้อมอยู่", "วิวชั้นสูง", "มีห้องให้เลือก 17 ชั้น ราคาจะแตกต่างกันตามชั้น"]
       },
       "images": [
         "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -54,7 +54,7 @@
       "id": "A05",
       "type": "studio",
       "area": "28.2㎡",
-      "floor": "10F",
+      "floor": "10F 朝西",
       "price": {
         "zh": "2850元/月",
         "en": "2850 yuan/month",
@@ -66,9 +66,9 @@
         "th": "มัดจำ 2 เดือน + เช่าล่วงหน้า 1 เดือน"
       },
       "features": {
-        "zh": ["大开间", "带独立卫生间", "独立阳台", "精装修", "安静舒适"],
-        "en": ["Open-plan studio", "Private bathroom", "Private balcony", "Fully furnished", "Quiet & comfortable"],
-        "th": ["สตูดิโอแบบโอเพนพลาน", "ห้องน้ำส่วนตัว", "ระเบียงส่วนตัว", "ตกแต่งพร้อมอยู่", "เงียบสงบ"]
+        "zh": ["大开间", "带独立卫生间", "独立阳台", "精装修", "安静舒适", "此房型共有17层可选，价格根据楼层不同"],
+        "en": ["Open-plan studio", "Private bathroom", "Private balcony", "Fully furnished", "Quiet & comfortable", "17 floors available for this apartment type, price varies by floor"],
+        "th": ["สตูดิโอแบบโอเพนพลาน", "ห้องน้ำส่วนตัว", "ระเบียงส่วนตัว", "ตกแต่งพร้อมอยู่", "เงียบสงบ", "มีห้องให้เลือก 17 ชั้น ราคาจะแตกต่างกันตามชั้น"]
       },
       "images": [
         "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -79,7 +79,7 @@
       "id": "A19",
       "type": "studio",
       "area": "30㎡",
-      "floor": "12F",
+      "floor": "12F 朝东",
       "price": {
         "zh": "3100元/月",
         "en": "3100 yuan/month",
@@ -91,9 +91,9 @@
         "th": "มัดจำ 2 เดือน + เช่าล่วงหน้า 1 เดือน"
       },
       "features": {
-        "zh": ["大开间", "带独立卫生间", "独立阳台", "精装修", "明厨明卫"],
-        "en": ["Open-plan studio", "Private bathroom", "Private balcony", "Fully furnished", "Bright kitchen & bath"],
-        "th": ["สตูดิโอแบบโอเพนพลาน", "ห้องน้ำส่วนตัว", "ระเบียงส่วนตัว", "ตกแต่งพร้อมอยู่", "ครัวและห้องน้ำสว่าง"]
+        "zh": ["大开间", "带独立卫生间", "独立阳台", "精装修", "明厨明卫", "此房型共有17层可选，价格根据楼层不同"],
+        "en": ["Open-plan studio", "Private bathroom", "Private balcony", "Fully furnished", "Bright kitchen & bath", "17 floors available for this apartment type, price varies by floor"],
+        "th": ["สตูดิโอแบบโอเพนพลาน", "ห้องน้ำส่วนตัว", "ระเบียงส่วนตัว", "ตกแต่งพร้อมอยู่", "ครัวและห้องน้ำสว่าง", "มีห้องให้เลือก 17 ชั้น ราคาจะแตกต่างกันตามชั้น"]
       },
       "images": [
         "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -104,7 +104,7 @@
       "id": "A12",
       "type": "studio",
       "area": "31.75㎡",
-      "floor": "15F",
+      "floor": "15F 朝南",
       "price": {
         "zh": "3200元/月",
         "en": "3200 yuan/month",
@@ -116,9 +116,9 @@
         "th": "มัดจำ 2 เดือน + เช่าล่วงหน้า 1 เดือน"
       },
       "features": {
-        "zh": ["大开间", "带独立卫生间", "独立阳台", "精装修", "城市景观"],
-        "en": ["Open-plan studio", "Private bathroom", "Private balcony", "Fully furnished", "City view"],
-        "th": ["สตูดิโอแบบโอเพนพลาน", "ห้องน้ำส่วนตัว", "ระเบียงส่วนตัว", "ตกแต่งพร้อมอยู่", "วิวเมือง"]
+        "zh": ["大开间", "带独立卫生间", "独立阳台", "精装修", "城市景观", "此房型共有17层可选，价格根据楼层不同"],
+        "en": ["Open-plan studio", "Private bathroom", "Private balcony", "Fully furnished", "City view", "17 floors available for this apartment type, price varies by floor"],
+        "th": ["สตูดิโอแบบโอเพนพลาน", "ห้องน้ำส่วนตัว", "ระเบียงส่วนตัว", "ตกแต่งพร้อมอยู่", "วิวเมือง", "มีห้องให้เลือก 17 ชั้น ราคาจะแตกต่างกันตามชั้น"]
       },
       "images": [
         "https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
