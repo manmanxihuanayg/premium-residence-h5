@@ -9,8 +9,8 @@ const CONTACT_INFO = {
     // WhatsApp号码（包含国家代码，不需要加号）/ WhatsApp number (with country code, no +)
     whatsapp: "8613800138000", // 示例：86为中国的国家代码
 
-    // 电话号码 / Phone number / เบอร์โทรศัพท์
-    phone: "13800138000",
+// 电话号码 / Phone number / เบอร์โทรศัพท์
+phone: "86-020-22365066", // 中国广州号码：86-020-22365066
 
     // 微信号（可选）/ WeChat ID (optional) / ไอดีวีแชท (ไม่จำเป็น)
     wechat: "your_wechat_id"
