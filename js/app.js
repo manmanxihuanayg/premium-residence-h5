@@ -188,14 +188,15 @@ function createApartmentCard(apt) {
             <div class="card-image">
                 <img
                     src="${mainImage}"
-                    alt="Apartment ${apt.id}"
+                    alt="Apartment ${roomNumberDisplay}"
                     loading="${LAZY_LOADING.enabled ? 'lazy' : 'eager'}"
                     onerror="this.src='https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'"
                 >
-               <span class="card-badge">${roomNumberDisplay}</span>
+                <span class="card-badge">${roomNumberDisplay}</span>
             </div>
             <div class="card-content">
-               <h3 class="card-badge">${roomNumberDisplay}</h3>
+                <div class="card-room-number">${roomNumberDisplay}</div>
+                <h3 class="card-title">${typeLabel}</h3>
                 <div class="card-info">
                     <span class="info-item">
                         <i class="fas fa-ruler-combined"></i>
