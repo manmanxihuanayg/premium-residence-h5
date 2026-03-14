@@ -412,11 +412,10 @@ body {
 }
 
 .contact-btn.whatsapp {
-    background: #25D366;
+    background: #25D366; /* WhatsApp 绿色 */
     color: var(--color-white);
     border: 2px solid #25D366;
 }
-
 .contact-btn.whatsapp:hover {
     background: #1ebd5a;
     border-color: #1ebd5a;
