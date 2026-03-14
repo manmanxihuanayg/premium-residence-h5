@@ -154,21 +154,40 @@ function createApartmentCard(apt) {
     const typeLabel = APARTMENT_TYPES[apt.type]?.[currentLang] || apt.type;
     const priceText = apt.price[currentLang] || apt.price.zh;
     const mainImage = apt.images[0] || 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+    
+    // 安全地获取楼层信息（中英泰三语）/ Safely get floor info with trilingual support
+    let floorText;
+    if (typeof apt.floor === 'object' && apt.floor !== null) {
+        // 如果是对象，根据当前语言获取值
+        if (currentLang && apt.floor[currentLang] && typeof apt.floor[currentLang] === 'string') {
+            floorText = apt.floor[currentLang];
+        } else if (apt.floor.zh && typeof apt.floor.zh === 'string') {
+            floorText = apt.floor.zh;
+        } else {
+            // 如果没有有效的字符串值，使用默认值
+            floorText = apt.floor.zh || apt.floor.en || apt.floor.th || '';
+        }
+    } else if (typeof apt.floor === 'string') {
+        // 如果是字符串，直接使用
+        floorText = apt.floor;
+    } else {
+        // 其他情况，使用空字符串
+        floorText = '';
+    }
 
     return `
         <div class="apartment-card" data-id="${apt.id}" onclick="openModal('${apt.id}')">
             <div class="card-image">
-                <img 
-                    src="${mainImage}" 
-                    alt="Apartment ${apt.id}" 
+                <img
+                    src="${mainImage}"
+                    alt="Apartment ${apt.id}"
                     loading="${LAZY_LOADING.enabled ? 'lazy' : 'eager'}"
                     onerror="this.src='https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'"
                 >
-<span class="card-badge">${apt.id}</span>
+                <span class="card-badge">${apt.id}</span>
             </div>
             <div class="card-content">
-                <div class="card-type">${typeLabel}</div>
-<h3 class="card-title">${apt.id}</h3>
+                <h3 class="card-title">${apt.id}</h3>
                 <div class="card-info">
                     <span class="info-item">
                         <i class="fas fa-ruler-combined"></i>
@@ -176,7 +195,7 @@ function createApartmentCard(apt) {
                     </span>
                     <span class="info-item">
                         <i class="fas fa-building"></i>
-                        ${apt.floor}
+                        ${floorText}
                     </span>
                 </div>
                 <div class="card-price">
@@ -196,6 +215,26 @@ function openModal(apartmentId) {
     const modal = document.getElementById('detailModal');
     const modalBody = document.getElementById('modalBody');
 
+    // 安全地获取楼层信息（中英泰三语）/ Safely get floor info with trilingual support
+    let floorText;
+    if (typeof apt.floor === 'object' && apt.floor !== null) {
+        // 如果是对象，根据当前语言获取值
+        if (currentLang && apt.floor[currentLang] && typeof apt.floor[currentLang] === 'string') {
+            floorText = apt.floor[currentLang];
+        } else if (apt.floor.zh && typeof apt.floor.zh === 'string') {
+            floorText = apt.floor.zh;
+        } else {
+            // 如果没有有效的字符串值，使用默认值
+            floorText = apt.floor.zh || apt.floor.en || apt.floor.th || '';
+        }
+    } else if (typeof apt.floor === 'string') {
+        // 如果是字符串，直接使用
+        floorText = apt.floor;
+    } else {
+        // 其他情况，使用空字符串
+        floorText = '';
+    }
+
     // 生成模态框内容 / Generate modal content / สร้างเนื้อหาโมดัล
     const featuresList = (apt.features[currentLang] || apt.features.zh).map(feature => `
         <div class="feature-item">
@@ -204,13 +243,27 @@ function openModal(apartmentId) {
         </div>
     `).join('');
 
+    // 添加楼层信息（中英泰三语）/ Add floor info with trilingual support
+    let floorInfoText = '';
+    if (apt.floorInfo && typeof apt.floorInfo === 'object' && apt.floorInfo !== null) {
+        if (currentLang && apt.floorInfo[currentLang] && typeof apt.floorInfo[currentLang] === 'string') {
+            floorInfoText = apt.floorInfo[currentLang];
+        } else if (apt.floorInfo.zh && typeof apt.floorInfo.zh === 'string') {
+            floorInfoText = apt.floorInfo.zh;
+        } else {
+            floorInfoText = apt.floorInfo.zh || apt.floorInfo.en || apt.floorInfo.th || '';
+        }
+    } else if (apt.floorInfo && typeof apt.floorInfo === 'string') {
+        floorInfoText = apt.floorInfo;
+    }
+
     const depositText = apt.deposit[currentLang] || apt.deposit.zh;
 
     modalBody.innerHTML = `
         <div class="modal-image-gallery">
             <div class="modal-main-image">
-                <img 
-                    src="${apt.images[0]}" 
+                <img
+                    src="${apt.images[0]}"
                     alt="Apartment ${apt.id}"
                     id="mainImage"
                     onerror="this.src='https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'"
@@ -234,7 +287,7 @@ function openModal(apartmentId) {
             </div>
             <div class="info-group">
                 <div class="info-label" data-i18n="modal.floor">${getTranslation('modal.floor') || 'Floor'}</div>
-                <div class="info-value">${apt.floor}</div>
+                <div class="info-value">${floorText}</div>
             </div>
             <div class="info-group">
                 <div class="info-label" data-i18n="modal.deposit">${getTranslation('modal.deposit') || 'Deposit'}</div>
@@ -250,6 +303,12 @@ function openModal(apartmentId) {
             <h4 class="features-title" data-i18n="modal.features">${getTranslation('modal.features') || 'Features'}</h4>
             <div class="features-list">
                 ${featuresList}
+                ${floorInfoText ? `
+                    <div class="feature-item floor-info">
+                        <i class="fas fa-info-circle"></i>
+                        <span>${floorInfoText}</span>
+                    </div>
+                ` : ''}
             </div>
         </div>
     `;
