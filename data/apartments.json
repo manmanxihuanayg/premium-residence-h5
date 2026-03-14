@@ -190,10 +190,10 @@
         "en": ["Open-plan studio", "Private bathroom", "Private balcony", "Fully furnished", "City view"],
         "th": ["สตูดิโอแบบโอเพนพลาน", "ห้องน้ำส่วนตัว", "ระเบียงส่วนตัว", "ตกแต่งพร้อมอยู่", "วิวเมือง"]
       },
-      "images": [
-        "https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-      ]
+"images": [
+  "images/room-12-01.jpg",
+  "images/room-12-02.jpg"
+]
     }
   ]
 }
