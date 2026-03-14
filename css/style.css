@@ -324,6 +324,14 @@ body {
     padding: var(--spacing-lg);
 }
 
+.card-room-number {
+    font-size: 0.875rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: var(--spacing-xs);
+}
+
 .card-type {
     font-size: 0.75rem;
     color: var(--color-gold);
