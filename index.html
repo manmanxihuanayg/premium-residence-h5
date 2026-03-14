@@ -52,16 +52,16 @@
     </section>
 
     <!-- Contact CTA -->
-    <div class="contact-cta">
-        <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" class="contact-btn whatsapp">
-            <i class="fab fa-whatsapp"></i>
-            <span data-i18n="contact.whatsapp">WhatsApp咨询</span>
-        </a>
-<a href="tel:86-020-22365066" class="contact-btn phone">
-    <i class="fas fa-phone"></i>
-    <span data-i18n="contact.phone">电话预约</span>
-</a>
-    </div>
+<div class="contact-cta">
+    <button onclick="copyWeChatId()" class="contact-btn wechat">
+        <i class="fab fa-weixin"></i>
+        <span data-i18n="contact.whatsapp">微信咨询</span>
+    </button>
+    <a href="tel:86-020-22365066" class="contact-btn phone">
+        <i class="fas fa-phone"></i>
+        <span data-i18n="contact.phone">电话预约</span>
+    </a>
+</div>
 
     <!-- Apartment Detail Modal -->
     <div class="modal" id="detailModal">
@@ -88,5 +88,47 @@
     <script src="js/config.js"></script>
     <script src="js/data.js"></script>
     <script src="js/app.js"></script>
+        <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    
+    <!-- 添加复制微信号的脚本和样式 -->
+    <script>
+        // 复制微信号到剪贴板
+        function copyWeChatId() {
+            const wechatId = CONTACT_INFO.wechat;
+            navigator.clipboard.writeText(wechatId).then(() => {
+                // 显示提示
+                const toast = document.createElement('div');
+                toast.className = 'toast-message';
+                toast.textContent = '微信号已复制：' + wechatId;
+                toast.style.cssText = `
+                    position: fixed;
+                    bottom: 100px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: rgba(0, 0, 0, 0.8);
+                    color: white;
+                    padding: 12px 24px;
+                    border-radius: 8px;
+                    z-index: 3000;
+                    animation: fadeInOut 2s ease-in-out;
+                `;
+                document.body.appendChild(toast);
+                setTimeout(() => toast.remove(), 2000);
+            }).catch(err => {
+                console.error('复制失败:', err);
+                alert('微信号：' + wechatId);
+            });
+        }
+    </script>
+    <style>
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+            10%, 90% { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+    </style>
 </body>
 </html>
+
