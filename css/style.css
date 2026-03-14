@@ -113,9 +113,9 @@ body {
 .hero-section {
     margin-top: 50px;
     position: relative;
-    height: 70vh;
-    min-height: 500px;
-    max-height: 700px;
+    height: 55vh;          /* 从 70vh 改为 55vh */
+    min-height: 400px;     /* 从 500px 改为 400px */
+    max-height: 550px;     /* 从 700px 改为 550px */
     overflow: hidden;
 }
 
