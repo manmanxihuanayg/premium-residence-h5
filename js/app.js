@@ -18,11 +18,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // 加载数据 / Load Data / โหลดข้อมูล
 function loadData() {
+    console.log('开始加载数据... / Start loading data...');
     Promise.all([
-        fetch('data/apartments.json').then(res => res.json()),
-        fetch('data/translations.json').then(res => res.json())
+        fetch('data/apartments.json').then(res => {
+            if (!res.ok) {
+                throw new Error(`Failed to fetch apartments.json: ${res.status} ${res.statusText}`);
+            }
+            return res.json();
+        }),
+        fetch('data/translations.json').then(res => {
+            if (!res.ok) {
+                throw new Error(`Failed to fetch translations.json: ${res.status} ${res.statusText}`);
+            }
+            return res.json();
+        })
     ])
     .then(([apartments, translations]) => {
+        console.log('数据加载成功！/ Data loaded successfully!', apartments, translations);
         apartmentsData = apartments.apartments;
         translationsData = translations.translations;
         renderApartments();
@@ -30,7 +42,9 @@ function loadData() {
     })
     .catch(error => {
         console.error('Error loading data:', error);
-        showError('无法加载数据，请稍后重试 / Failed to load data, please try again later / ไม่สามารถโหลดข้อมูลได้ โปรดลองอีกครั้ง');
+        showError(`无法加载数据，请稍后重试 / Failed to load data, please try again later / ไม่สามารถโหลดข้อมูลได้ โปรดลองอีกครั้ง
+
+错误信息 / Error message: ${error.message}`);
     });
 }
 
@@ -93,16 +107,29 @@ function switchLanguage(lang) {
 
 // 更新界面语言 / Update UI Language / อัปเดตภาษาอินเทอร์เฟซ
 function updateLanguage() {
-    // 更新带 data-i18n 属性的所有元素 / Update all elements with data-i18n attribute
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.dataset.i18n;
         const text = getTranslation(key);
         if (text) {
-            element.textContent = text;
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.placeholder = text;
+            } else {
+                element.textContent = text;
+            }
         }
     });
 
-    // 重新渲染房源卡片以更新价格和配置信息 / Re-render apartment cards to update prices and features
+    document.querySelectorAll('button[data-i18n], a[data-i18n]').forEach(button => {
+        const key = button.dataset.i18n;
+        const text = getTranslation(key);
+        if (text) {
+            const span = button.querySelector('span');
+            if (span && !span.dataset.i18n) {
+                span.textContent = text;
+            }
+        }
+    });
+
     renderApartments();
 }
 
