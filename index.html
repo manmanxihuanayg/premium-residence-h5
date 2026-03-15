@@ -50,16 +50,20 @@
         </div>
     </section>
 
-    <!-- Contact CTA -->
+<!-- Contact CTA -->
 <div class="contact-cta">
-    <button onclick="copyWeChatId()" class="contact-btn wechat">
-        <i class="fab fa-weixin"></i>
+    <button class="contact-btn whatsapp" onclick="copyWeChatId()">
+        <i class="fab fa-whatsapp"></i>
         <span data-i18n="contact.whatsapp">微信咨询</span>
     </button>
-<a href="tel:+862022365066" class="contact-btn phone">
-    <i class="fas fa-phone"></i>
-    <span data-i18n="contact.phone">电话预约</span>
-</a>
+    <button class="contact-btn apartment-intro" onclick="openApartmentIntroModal()">
+        <i class="fas fa-building"></i>
+        <span data-i18n="contact.apartmentIntro">公寓介绍</span>
+    </button>
+    <a href="tel:+862022365066" class="contact-btn phone">
+        <i class="fas fa-phone"></i>
+        <span data-i18n="contact.phone">电话预约</span>
+    </a>
 </div>
 
     <!-- Apartment Detail Modal -->
@@ -83,6 +87,214 @@
         </div>
     </div>
 
+<!-- Apartment Introduction Modal -->
+<div class="modal" id="apartmentIntroModal">
+    <div class="modal-content intro-modal">
+        <div class="modal-header">
+            <h3 data-i18n="intro.title">公寓介绍</h3>
+            <button class="close-btn" onclick="closeApartmentIntroModal()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="modal-body">
+            <!-- Building Image -->
+            <div class="intro-building-image">
+                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                     alt="华海达公寓外观" 
+                     onerror="this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'">
+            </div>
+
+            <!-- Contact Information -->
+            <div class="intro-section">
+                <h4 class="intro-section-title">
+                    <i class="fas fa-address-card"></i>
+                    <span data-i18n="intro.contact">联系方式</span>
+                </h4>
+                <div class="intro-contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-details">
+                            <div class="contact-label" data-i18n="intro.phone">电话</div>
+                            <div class="contact-value">
+                                <a href="tel:+862022365066">+86 20 2236 5066</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-weixin"></i>
+                        <div class="contact-details">
+                            <div class="contact-label" data-i18n="intro.wechat">微信</div>
+                            <div class="contact-value" id="wechatId">华海达公寓</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-details">
+                            <div class="contact-label" data-i18n="intro.email">邮箱</div>
+                            <div class="contact-value">
+                                <a href="mailto:hhdapartment@163.com">hhdapartment@163.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-details">
+                            <div class="contact-label" data-i18n="intro.address">地址</div>
+                            <div class="contact-value">广州市天河区龙口东横街28号华海达公寓</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transportation -->
+            <div class="intro-section">
+                <h4 class="intro-section-title">
+                    <i class="fas fa-subway"></i>
+                    <span data-i18n="intro.transportation">交通指南</span>
+                </h4>
+                <div class="intro-transportation">
+                    <div class="transport-item">
+                        <div class="transport-icon metro">地铁</div>
+                        <div class="transport-details">
+                            <div class="transport-name" data-i18n="intro.metroStations">临近地铁站</div>
+                            <div class="transport-desc">体育西路站（1/3号线）、林和西站（1/3/3号线北延段）</div>
+                        </div>
+                    </div>
+                    <div class="transport-item">
+                        <div class="transport-icon brt">BRT</div>
+                        <div class="transport-details">
+                            <div class="transport-name" data-i18n="intro.brtStations">BRT站</div>
+                            <div class="transport-desc">体育中心站、岗顶站</div>
+                        </div>
+                    </div>
+                    <div class="transport-item">
+                        <div class="transport-icon airport">✈</div>
+                        <div class="transport-details">
+                            <div class="transport-name" data-i18n="intro.fromAirport">从机场到达</div>
+                            <div class="transport-desc">
+                                广州白云国际机场 → 地铁3号线 → 体育西路站 → 步行8分钟
+                            </div>
+                        </div>
+                    </div>
+                    <div class="transport-item">
+                        <div class="transport-icon train">🚄</div>
+                        <div class="transport-details">
+                            <div class="transport-name" data-i18n="intro.fromStation">从高铁站到达</div>
+                            <div class="transport-desc">
+                                广州南站 → 地铁2号线 → 公园前站 → 换乘1号线 → 体育西路站
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Button -->
+            <div class="intro-section">
+                <div class="map-button">
+                    <a href="https://maps.google.com/?q=广州市天河区龙口东横街28号华海达公寓" 
+                       target="_blank"
+                       class="map-btn">
+                        <i class="fas fa-map"></i>
+                        <span data-i18n="intro.viewMap">查看地图</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Surrounding Facilities -->
+            <div class="intro-section">
+                <h4 class="intro-section-title">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span data-i18n="intro.shopping">周边配套</span>
+                </h4>
+                <div class="intro-facilities">
+                    <div class="facility-item">
+                        <div class="facility-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="facility-details">
+                            <div class="facility-name">太古汇购物中心</div>
+                            <div class="facility-desc" data-i18n="intro.taiKooHui">大型高端购物中心，含奢侈品、餐饮、娱乐</div>
+                        </div>
+                    </div>
+                    <div class="facility-item">
+                        <div class="facility-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div class="facility-details">
+                            <div class="facility-name">正佳广场</div>
+                            <div class="facility-desc" data-i18n="intro.zhengJia">亚洲顶级购物中心，体验式购物</div>
+                        </div>
+                    </div>
+                    <div class="facility-item">
+                        <div class="facility-icon">
+                            <i class="fas fa-supermarket"></i>
+                        </div>
+                        <div class="facility-details">
+                            <div class="facility-name">天河城百货</div>
+                            <div class="facility-desc" data-i18n="intro.teemMall">老牌购物地标，品类齐全</div>
+                        </div>
+                    </div>
+                    <div class="facility-item">
+                        <div class="facility-icon">
+                            <i class="fas fa-shopping-basket"></i>
+                        </div>
+                        <div class="facility-details">
+                            <div class="facility-name">万菱汇</div>
+                            <div class="facility-desc" data-i18n="intro.onPlaza">时尚购物中心，年轻潮流</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nearby Universities -->
+            <div class="intro-section">
+                <h4 class="intro-section-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span data-i18n="intro.universities">邻近大学</span>
+                </h4>
+                <div class="intro-universities">
+                    <div class="university-item">
+                        <div class="university-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="university-details">
+                            <div class="university-name">华南理工大学</div>
+                            <div class="university-distance">距离 2.5 公里</div>
+                        </div>
+                    </div>
+                    <div class="university-item">
+                        <div class="university-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="university-details">
+                            <div class="university-name">暨南大学</div>
+                            <div class="university-distance">距离 1.8 公里</div>
+                        </div>
+                    </div>
+                    <div class="university-item">
+                        <div class="university-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="university-details">
+                            <div class="university-name">华南师范大学</div>
+                            <div class="university-distance">距离 2.2 公里</div>
+                        </div>
+                    </div>
+                    <div class="university-item">
+                        <div class="university-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="university-details">
+                            <div class="university-name">广东外语外贸大学</div>
+                            <div class="university-distance">距离 3.0 公里</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
     <!-- Scripts -->
     <script src="js/config.js"></script>
     <script src="js/data.js"></script>
