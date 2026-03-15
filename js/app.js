@@ -107,10 +107,12 @@ function switchLanguage(lang) {
 
 // 更新界面语言 / Update UI Language / อัปเดตภาษาอินเทอร์เฟซ
 function updateLanguage() {
+    // 更新带 data-i18n 属性的所有元素
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.dataset.i18n;
         const text = getTranslation(key);
         if (text) {
+            // 检查元素是否是输入框或按钮
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = text;
             } else {
@@ -119,17 +121,20 @@ function updateLanguage() {
         }
     });
 
+    // 特别处理按钮内部的 span 元素
     document.querySelectorAll('button[data-i18n], a[data-i18n]').forEach(button => {
         const key = button.dataset.i18n;
         const text = getTranslation(key);
         if (text) {
             const span = button.querySelector('span');
             if (span && !span.dataset.i18n) {
+                // 如果 span 没有 data-i18n，说明这是主要的文本元素
                 span.textContent = text;
             }
         }
     });
 
+    // 重新渲染房源卡片以更新价格和配置信息
     renderApartments();
 }
 
